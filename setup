@@ -1,0 +1,9 @@
+Zookeeper : Decides between leader and the follower of partition HA.
+docker run --name zookeeper -p 2181:2181 zookeeper
+kafka:
+docker run --name kafka -p 9092:9092 
+-e KAFKA_ZOOKEEPER_CONNECT=Darshans-MacBook-Air.local:2181 
+-e KAFKA_ADVERTISED_LISTENERS=PLAINTEXT://Darshans-MacBook-Air.local:9092
+-e KAFKA_OFFSET_TOPIC_REPLICATION_FACTOR=1
+confluent/cp-kafka
+
